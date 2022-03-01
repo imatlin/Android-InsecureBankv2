@@ -1,3 +1,3 @@
 build_commands:
- - echo “Building codebase...”
+ - echo “Building codebase (in pull request branch)...”
  - ./InsecureBankv2/gradlew assembleDebug --stacktrace
