@@ -2,8 +2,9 @@
 name: Build and upload to Data Theorem
 on:
   push:
-    branches: [ master, imatlin-dt-workflow ]
-
+    branches: 
+      - master 
+      - imatlin-dt-workflow
 jobs:  
   apk:
     name: Generate & Upload APK
@@ -15,7 +16,9 @@ jobs:
         with:
           java-version: 1.8
       - name: Build debug APK
-        run: bash cd InsecureBankv2 && ./gradlew assembleDebug
+        run: |
+          - cd InsecureBankv2
+          - ./gradlew assembleDebug
       - name: Upload to Data Theorem
         uses: datatheorem/datatheorem-mobile-secure-action@support-optional-parameters
         with:
