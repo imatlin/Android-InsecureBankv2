@@ -17,12 +17,13 @@ jobs:
           java-version: 1.8
       - name: Build debug APK
         run: |
-          - cd InsecureBankv2
-          - ./gradlew assembleDebug
+          echo $PWD
+          cd InsecureBankv2
+          ./gradlew assembleDebug
       - name: Upload to Data Theorem
         uses: datatheorem/datatheorem-mobile-secure-action@support-optional-parameters
         with:
-          UPLOAD_BINARY_PATH: "./*.apk"
+          UPLOAD_BINARY_PATH: "./build/outputs/apk/*.apk"
           DT_UPLOAD_API_KEY: ${{ secrets.DT_UPLOAD_API_KEY }}
           USERNAME: "test"
           PASSWORD: ${{ secrets.DT_DAST_PASSWORD }}
