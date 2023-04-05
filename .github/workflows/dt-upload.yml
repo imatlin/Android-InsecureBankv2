@@ -2,7 +2,7 @@
 name: Build and upload to Data Theorem
 on:
   push:
-    branches: [ master ]
+    branches: [ master, imatlin-dt-workflow ]
 
 jobs:  
   apk:
