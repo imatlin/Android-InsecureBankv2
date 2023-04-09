@@ -23,7 +23,7 @@ jobs:
       - name: Upload to Data Theorem
         uses: datatheorem/datatheorem-mobile-secure-action@support-optional-parameters
         with:
-          UPLOAD_BINARY_PATH: "**/*.apk"
+          UPLOAD_BINARY_PATH: "**/app-*.apk"
           DT_UPLOAD_API_KEY: ${{ secrets.DT_UPLOAD_API_KEY }}
           USERNAME: "test"
           PASSWORD: ${{ secrets.DT_DAST_PASSWORD }}
