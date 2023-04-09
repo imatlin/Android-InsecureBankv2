@@ -18,7 +18,6 @@ jobs:
           java-version: 11
       - name: Build debug APK
         run: |
-          echo $PWD
           cd InsecureBankv2
           ./gradlew assembleDebug
       - name: Upload to Data Theorem
@@ -29,6 +28,6 @@ jobs:
           USERNAME: 'test'
           PASSWORD: ${{ secrets.DT_DAST_PASSWORD }}
           COMMENTS: 'This is a test'
-          RELEASE_ID: ${{ vars.GITHUB_RUN_NUMBER }}
+          RELEASE_ID: ${{ env.GITHUB_RUN_ID }}
           EXTERNAL_ID: 'App_12230045'
           
