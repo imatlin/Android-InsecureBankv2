@@ -1,0 +1,33 @@
+# This workflow will build a Android project with Gradle, then upload the app binary to Data Theorem for scanning
+name: Build and upload to Data Theorem
+on:
+  push:
+    branches: 
+      - master 
+      - imatlin-dt-workflow
+jobs:  
+  apk:
+    name: Generate & Upload APK
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: set up JDK 1.11
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'microsoft'
+          java-version: 11
+      - name: Build debug APK
+        run: |
+          cd InsecureBankv2
+          ./gradlew assembleDebug
+      - name: Upload to Data Theorem
+        uses: datatheorem/datatheorem-mobile-secure-action@support-optional-parameters
+        with:
+          UPLOAD_BINARY_PATH: '**/app-debug*.apk'
+          DT_UPLOAD_API_KEY: ${{ secrets.DT_UPLOAD_API_KEY }}
+          USERNAME: 'test'
+          PASSWORD: ${{ secrets.DT_DAST_PASSWORD }}
+          COMMENTS: 'This is a test'
+          RELEASE_ID: ${{ env.GITHUB_RUN_ID }}
+          EXTERNAL_ID: 'App_12230045'
+          
