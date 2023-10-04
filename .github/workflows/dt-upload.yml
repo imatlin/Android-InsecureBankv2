@@ -21,7 +21,7 @@ jobs:
           cd InsecureBankv2
           ./gradlew assembleDebug
       - name: Upload to Data Theorem
-        uses: datatheorem/datatheorem-mobile-secure-action@support-optional-parameters
+        uses: datatheorem/datatheorem-mobile-secure-action
         with:
           UPLOAD_BINARY_PATH: '**/app-debug*.apk'
           DT_UPLOAD_API_KEY: ${{ secrets.DT_UPLOAD_API_KEY }}
