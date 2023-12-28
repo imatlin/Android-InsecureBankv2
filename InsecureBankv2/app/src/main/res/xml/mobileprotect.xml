@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+    <AUTH_TOKEN>5b76b473f4209e47b33cde38d0327d4bb01536ed7a93c30b27ab932594fe9cd5</AUTH_TOKEN>
+    <Camera>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </Camera>
+    <DebuggerDetection>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </DebuggerDetection>
+    <DeviceIdentifiers>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </DeviceIdentifiers>
+    <DeviceLocation>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </DeviceLocation>
+    <ExifLocation>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </ExifLocation>
+    <Webviews>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </Webviews>
+    <RootDetection>
+        <Enabled>false</Enabled>
+    </RootDetection>
+    <PhotoAccess>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </PhotoAccess>
+    <Contacts>
+        <Enabled>false</Enabled>
+    </Contacts>
+    <TamperDetection>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </TamperDetection>
+    <TapJackingProtection>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </TapJackingProtection>
+    <ScreenCastingProtection>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </ScreenCastingProtection>
+    <VerifyApps>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </VerifyApps>
+    <HealthAccess>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </HealthAccess>
+    <Pasteboard>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </Pasteboard>
+    <CalendarAccess>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </CalendarAccess>
+    <VideoAccess>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </VideoAccess>
+    <DownloadAccess>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </DownloadAccess>
+    <MicrophoneAccess>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </MicrophoneAccess>
+    <CheatingDetection>
+        <Enabled>false</Enabled>
+        <Exceptions />
+    </CheatingDetection>
+    <EmulatorProtection>
+        <Enabled>false</Enabled>
+    </EmulatorProtection>
+</root>

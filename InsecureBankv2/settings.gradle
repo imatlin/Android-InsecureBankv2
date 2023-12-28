@@ -1,1 +1,18 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+        //gradlePluginPortal() //optional: depends on the plugin you are currently using
+        google()
+        //Mobile Protect Maven Repository
+        maven {
+            credentials {
+                //Leave the username as "MAVEN"
+                username "MAVEN"
+                password "$MOBILEPROTECT_REPO_API_KEY"
+            }
+            url "https://mobile-protect-repos.securetheorem.com/mobileprotect-android"
+        }
+    }
+}
+
 include ':app'

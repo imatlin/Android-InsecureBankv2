@@ -1,14 +1,5 @@
 package com.android.insecurebankv2;
 
-import java.io.UnsupportedEncodingException;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,10 +10,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.android.insecurebankv2.DoLogin;
+import com.datatheorem.mobileprotect.MobileProtect;
 import com.marcohc.toasteroid.Toasteroid;
+
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 /*
 The page that accepts username and the password from the user. The credentials 
@@ -48,6 +47,7 @@ public class LoginActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        MobileProtect.init(this.getApplication(), R.xml.mobileprotect);
 		setContentView(R.layout.activity_log_main);
 		String mess = getResources().getString(R.string.is_admin);
 		if (mess.equals("no")) {
