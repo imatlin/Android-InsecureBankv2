@@ -2,3 +2,10 @@ build_commands:
  - echo “Building codebase...”
  - cd InsecureBankv2
  - ./gradlew assembleDebug --stacktrace
+
+disable_sast_scans_on_branches:
+  - no-scan-branch
+
+rule_packs:
+  - CRITICAL
+  - GATEKEEPER_GAMBLING
